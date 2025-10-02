@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 export default function About() {
   return (
@@ -18,27 +19,30 @@ export default function About() {
               <div className="absolute -bottom-4 right-1/3 w-1 h-20 bg-[#F05D5E]"></div>
               
               {/* Main image */}
-              <div className="col-span-2 h-80">
-                <img 
+              <div className="col-span-2 h-80 relative">
+                <Image 
                   src="https://images.unsplash.com/photo-1621747650384-6e944e454a54?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
                   alt="Barbershop Interior" 
-                  className="w-full h-full object-cover"
+                  fill
+                  className="object-cover"
                 />
               </div>
               
               {/* Smaller images */}
-              <div className="h-56">
-                <img 
+              <div className="h-56 relative">
+                <Image 
                   src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?q=80&w=2070&auto=format&fit=crop" 
                   alt="Barber tools" 
-                  className="w-full h-full object-cover"
+                  fill
+                  className="object-cover"
                 />
               </div>
-              <div className="h-56">
-                <img 
+              <div className="h-56 relative">
+                <Image 
                   src="https://images.unsplash.com/photo-1519500099198-fd81846b8f03?q=80&w=1770&auto=format&fit=crop" 
                   alt="Barber chair" 
-                  className="w-full h-full object-cover"
+                  fill
+                  className="object-cover"
                 />
               </div>
               
@@ -69,13 +73,13 @@ export default function About() {
               </p>
               
               <p>
-                Founded in 2015, we've built our reputation on exceptional haircuts, premium 
+                Founded in 2015, we&apos;ve built our reputation on exceptional haircuts, premium 
                 shaves, and a commitment to customer service that exceeds expectations. Our 
                 master barbers bring years of expertise and passion to every client interaction.
               </p>
               
               <p>
-                We believe that a great haircut is more than just a service—it's an experience 
+                We believe that a great haircut is more than just a service—it&apos;s an experience 
                 that boosts confidence and helps you put your best face forward. Our shop 
                 combines classic barbering traditions with contemporary styling to create 
                 a unique atmosphere where you can relax and enjoy being taken care of.

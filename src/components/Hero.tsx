@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 export default function Hero() {
   return (
@@ -46,10 +47,11 @@ export default function Hero() {
               <div className="transform hover:scale-105 transition-transform duration-500 ease-out">
                 <div className="h-64 md:h-72 bg-[#F05D5E]/10 backdrop-blur-sm p-1 relative">
                   <div className="h-full w-full overflow-hidden">
-                    <img 
+                    <Image 
                       src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?q=80&w=2070&auto=format&fit=crop" 
                       alt="Classic Haircut" 
-                      className="h-full w-full object-cover"
+                      fill
+                      className="object-cover"
                     />
                   </div>
                   <div className="absolute bottom-4 left-4 bg-white/10 backdrop-blur-sm px-3 py-1">
@@ -62,10 +64,11 @@ export default function Hero() {
               <div className="transform hover:scale-105 transition-transform duration-500 ease-out mt-8">
                 <div className="h-64 md:h-72 bg-[#F05D5E]/10 backdrop-blur-sm p-1 relative">
                   <div className="h-full w-full overflow-hidden">
-                    <img 
+                    <Image 
                       src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?q=80&w=1988&auto=format&fit=crop" 
                       alt="Beard Trim" 
-                      className="h-full w-full object-cover"
+                      fill
+                      className="object-cover"
                     />
                   </div>
                   <div className="absolute bottom-4 left-4 bg-white/10 backdrop-blur-sm px-3 py-1">
