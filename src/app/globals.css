@@ -1,0 +1,288 @@
+@import "tailwindcss";
+
+/* Color variables for the modern edgy design */
+:root {
+  --color-primary: #2D3142;       /* Dark blue-gray */
+  --color-secondary: #F05D5E;     /* Vibrant red */
+  --color-accent: #E7ECEF;        /* Light gray-blue */
+  --color-highlight: #4F5D75;     /* Medium blue-gray */
+  --color-light: #FFFFFF;         /* Pure white */
+  --color-dark: #1A1E29;          /* Dark background */
+  --color-dark-secondary: #2D3142; /* Dark blue-gray */
+  --color-text: #E7ECEF;          /* Main text color (light) */
+  --color-text-dark: #2D3142;     /* Dark text color */
+  --color-border: #3D4663;        /* Dark borders */
+  --color-gradient-start: #F05D5E;/* Gradient start */
+  --color-gradient-end: #E34A4C;  /* Gradient end */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-roboto), sans-serif;
+  color: var(--color-text);
+  background-color: var(--color-dark);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-bebas), sans-serif;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* Modern Button styles with angular design */
+.btn-primary {
+  background-color: var(--color-secondary);
+  color: white;
+  padding: 0.75rem 2rem;
+  border-radius: 0;
+  font-family: var(--font-bebas), sans-serif;
+  font-size: 1.25rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  position: relative;
+  transform: skew(-12deg);
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.btn-primary span {
+  display: inline-block;
+  transform: skew(12deg);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-gradient-end);
+  transform: skew(-12deg) translateY(-5px);
+  box-shadow: 0 10px 20px rgba(240, 93, 94, 0.3);
+}
+
+.btn-secondary {
+  background-color: var(--color-primary);
+  color: var(--color-light);
+  padding: 0.75rem 2rem;
+  border-radius: 0;
+  font-family: var(--font-bebas), sans-serif;
+  font-size: 1.25rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  position: relative;
+  transform: skew(-12deg);
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.btn-secondary span {
+  display: inline-block;
+  transform: skew(12deg);
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-highlight);
+  transform: skew(-12deg) translateY(-5px);
+  box-shadow: 0 10px 20px rgba(45, 49, 66, 0.3);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--color-light);
+  padding: 0.75rem 2rem;
+  border: 2px solid var(--color-secondary);
+  border-radius: 0;
+  font-family: var(--font-bebas), sans-serif;
+  font-size: 1.25rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  transform: skew(-12deg);
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.btn-outline span {
+  display: inline-block;
+  transform: skew(12deg);
+}
+
+.btn-outline:hover {
+  background-color: var(--color-secondary);
+  color: var(--color-light);
+  transform: skew(-12deg) translateY(-5px);
+  box-shadow: 0 10px 20px rgba(240, 93, 94, 0.2);
+}
+
+/* Custom scrollbar with brand styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-light);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-accent);
+  border-radius: 0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-secondary);
+}
+
+/* Modern animations */
+.animate-fade-in {
+  animation: fadeIn 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.animate-slide-up {
+  animation: slideUp 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.animate-slide-in-left {
+  animation: slideInLeft 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideInLeft {
+  from { transform: translateX(-50px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInRight {
+  from { transform: translateX(50px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+/* Section styles with bold angular look */
+.section-padding {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  position: relative;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .section-padding {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+}
+
+.section-title {
+  font-size: 3.5rem;
+  line-height: 0.9;
+  margin-bottom: 1.5rem;
+  color: var(--color-light);
+  position: relative;
+  padding-left: 1rem;
+  z-index: 1;
+  color: #2D3142;
+}
+
+.section-title::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.5rem;
+  bottom: 0.5rem;
+  width: 5px;
+  background-color: var(--color-secondary);
+  z-index: -1;
+}
+
+@media (min-width: 768px) {
+  .section-title {
+    font-size: 4.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-title {
+    font-size: 5.5rem;
+  }
+}
+
+.section-subtitle {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  color: var(--color-accent);
+  margin-bottom: 3rem;
+  max-width: 48rem;
+  font-weight: 300;
+  color: #4F5D75;
+}
+
+/* Angular decorative element for sections */
+.angular-decor {
+  position: absolute;
+  width: 25%;
+  height: 50%;
+  background-color: var(--color-secondary);
+  opacity: 0.05;
+  z-index: 0;
+  transform: skew(-12deg);
+}
+
+.angular-decor-top-right {
+  top: 0;
+  right: -10%;
+}
+
+.angular-decor-bottom-left {
+  bottom: 0;
+  left: -10%;
+}
+
+/* Card and Container Styles */
+.card-modern {
+  border: none;
+  background-color: var(--color-primary);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.card-modern::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background-color: var(--color-secondary);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+  z-index: -1;
+}
+
+.card-modern:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.card-modern:hover::after {
+  transform: scaleX(1);
+}
+
+.container-custom {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
+}
